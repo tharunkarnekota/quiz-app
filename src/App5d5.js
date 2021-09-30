@@ -20,7 +20,7 @@ const App = () => {
       })}
       <center>
         <br />
-        <button className="btn btn-primary" onClick={()=> alert('Your Score is '+marks.reduce((a,b)=>a+b,0)+'/10')}>End Quiz</button><br/><br />
+        <button className="btn btn-primary" onClick={()=> alert(marks.reduce((a,b)=>a+b,0)+'/10')}>End Quiz</button><br/><br />
       </center>
     </div>
   )

@@ -4,12 +4,9 @@ import Display from './Display';
 
 
 const App = () => {
-  let tempMarks = []
-  const [marks,setMarks] = useState([]);
-  const result = (value,index) =>{
-    tempMarks = marks;
-    tempMarks[index] = value;
-    setMarks([...tempMarks]);
+  const [marks,setMarks] = useState(0);
+  const result = (value) =>{
+    setMarks(marks+value);
   }
   return (
     <div>
@@ -20,7 +17,7 @@ const App = () => {
       })}
       <center>
         <br />
-        <button className="btn btn-primary" onClick={()=> alert('Your Score is '+marks.reduce((a,b)=>a+b,0)+'/10')}>End Quiz</button><br/><br />
+        <button className="btn btn-primary" onClick={()=> alert(marks)}>End Quiz</button><br/><br />
       </center>
     </div>
   )
